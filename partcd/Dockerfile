@@ -1,9 +1,9 @@
 FROM python
 WORKDIR /app
 COPY ./flaskapp.py .
-COPY ./hello.html .
-ADD requirements.txt
-RUN pip install flask
+COPY ./templates .
+ADD requirements.txt .
+RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python","main.py"]
+ENTRYPOINT ["python","flaskapp.py"]
 
