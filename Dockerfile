@@ -1,5 +1,5 @@
-FROM PYTHON
+FROM python
 WORKDIR /app
 COPY ./main.py .
-CMD ["python","main.py"]
+ENTRYPOINT ["python","main.py"]
 
